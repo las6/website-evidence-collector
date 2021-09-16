@@ -81,6 +81,7 @@ async function run (uri, argv) {
                    argv.output ? path.join(argv.output, 'browser-profile') :
                      undefined,
     args: [
+      `--no-sandbox`,
       `--user-agent=${UserAgent}`,
       `--window-size=${WindowSize.width},${WindowSize.height}`,
     ].concat(argv.browserOptions, argv['--'] || []),
